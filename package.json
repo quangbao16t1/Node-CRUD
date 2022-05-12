@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel": "^6.23.0",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.0.2",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.3.3",
+    "morgan": "^1.10.0",
+    "nodemodule": "^0.3.0",
+    "nodemon": "^2.0.16"
+  },
+  "name": "nodedb",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
