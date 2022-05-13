@@ -13,7 +13,8 @@
     "mongoose": "^6.3.3",
     "morgan": "^1.10.0",
     "nodemodule": "^0.3.0",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "swagger-ui-express": "^4.3.0"
   },
   "name": "nodedb",
   "version": "1.0.0",
@@ -25,5 +26,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quangbao16t1/Node-CRUD.git"
+  },
+  "bugs": {
+    "url": "https://github.com/quangbao16t1/Node-CRUD/issues"
+  },
+  "homepage": "https://github.com/quangbao16t1/Node-CRUD#readme",
   "description": ""
 }

@@ -41,4 +41,20 @@ SubscriberController.getAllSubscribers = async (req, res) => {
     }
 }
 
+SubscriberController.getSubscriberById = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const subscriber = await SubscriberService.getrSubscriberById(id);
+        res.status(200).json({
+            success: true,
+            message: `More on ${subscriber.name}!!! `,
+            Subscriber: subscriber,
+        })
+    } catch (error) {
+        res.status(404).json({
+            error: error.message,
+        })
+    }
+}
+
 export default SubscriberController;

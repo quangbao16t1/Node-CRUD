@@ -7,7 +7,7 @@ SubscriberService.createSubscriber = async (subscriber) => {
 }
 
 SubscriberService.getAllSubscribers = async () => {
-    return await SubscriberModel.find();
+    return await SubscriberModel.find().populate("courses");
 }
 
 SubscriberService.getrSubscriberById = async (id) => {

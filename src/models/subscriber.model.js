@@ -20,7 +20,7 @@ const subscriberModel = new schema({
     },
     courses: [{ 
         type: mongoose.Schema.Types.ObjectId, 
-        ref: "Course" 
+        ref: "courses" 
     }]
 }, {
     timestamps: true
