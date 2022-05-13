@@ -58,3 +58,4 @@ SubscriberController.getSubscriberById = async (req, res) => {
 }
 
 export default SubscriberController;
+

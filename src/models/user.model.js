@@ -4,7 +4,7 @@ import SubscriberModel from "./subscriber.model.js";
 const schema = mongoose.Schema;
 
 const userModel = new schema({
-    _id: mongoose.Schema.Types.ObjectId,
+    // _id: mongoose.Schema.Types.ObjectId,
     name: {
         first: {
             type: String,
@@ -37,7 +37,7 @@ const userModel = new schema({
         ref: "courses"
     }],
     subscribedAccount: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "subscribers"
     },
 },
@@ -47,29 +47,29 @@ const userModel = new schema({
 
 const UserModel = mongoose.model("users", userModel);
 
-UserModel.virtual("fullName")
-    .get(function () {
-        return `${this.name.first} ${this.name.last}`;
-    });
+// UserModel.virtual("fullName")
+//     .get(function () {
+//         return `${this.name.first} ${this.name.last}`;
+//     });
 
-UserModel.pre("save", function (next) {
-    let user = this;
-    if (user.subscribedAccount === undefined) {
-        SubscriberModel.findOne({
-            email: user.email
-        })
-            .then(subscriber => {
-                user.subscribedAccount = subscriber;
-                next();
-            })
-            .catch(error => {
-                console.log(`Error in connecting subscriber: ${error.message}`);
-                next(error);
-            });
-    } else {
-        next();
-    }
-});
+// UserModel.pre("save", function (next) {
+//     let user = this;
+//     if (user.subscribedAccount === undefined) {
+//         SubscriberModel.findOne({
+//             email: user.email
+//         })
+//             .then(subscriber => {
+//                 user.subscribedAccount = subscriber;
+//                 next();
+//             })
+//             .catch(error => {
+//                 console.log(`Error in connecting subscriber: ${error.message}`);
+//                 next(error);
+//             });
+//     } else {
+//         next();
+//     }
+// });
 
 export default UserModel;
 

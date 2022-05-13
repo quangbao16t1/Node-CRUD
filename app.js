@@ -8,6 +8,7 @@ import courseRouter from "./src/routes/course.routes.js";
 import subscriberRouter from "./src/routes/subscriber.routes.js";
 import swaggerUi from "swagger-ui-express";
 import swaggerDocument from "./swagger.json" assert {type: "json"};
+import userRouter from "./src/routes/user.routes.js";
 
 connectDatabase();
 
@@ -28,6 +29,7 @@ app.use(bodyParser.json());
 
 app.use("/", courseRouter);
 app.use("/", subscriberRouter);
+app.use("/", userRouter);
 
 app.get("/", (req, res) => {
     console.log("dsadasdas");
